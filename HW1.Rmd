@@ -1,0 +1,24 @@
+---
+title: "Dev_Data_Product_Assignment_1"
+author: "Philip To"
+date: "April 9, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warnings = FALSE)
+
+library(leaflet)
+```
+
+## R Markdown
+The following map shows the location of my high school. The map is created on April 9, 2017.
+
+```{r, echo = FALSE, }
+
+m = leaflet() %>%
+     addTiles() %>%
+     addMarkers(lat=22.309053, lng=114.171958, popup="Methodist College")
+m
+
+```
